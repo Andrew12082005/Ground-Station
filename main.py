@@ -43,6 +43,7 @@ class MainApp(QtWidgets.QMainWindow):
 
         data = self.inputdata()
         #Hi
+        #H
         self.ui.timevalue.setText(data["time"])
         self.ui.vxvalue.setText(f"{data['vx']:.2f}")
         self.ui.vyvalue.setText(f"{data['vy']:.2f}")
