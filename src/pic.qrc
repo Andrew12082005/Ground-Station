@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>Qball.drawio.png</file>
+  </qresource>
+</RCC>
