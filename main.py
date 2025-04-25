@@ -3,6 +3,8 @@ from PyQt5.QtCore import QTimer ,QTime
 import random
 from src.gs import Ui_MainWindow
 from src import decoder
+from src import pic_rc
+
 
 class MainApp(QtWidgets.QMainWindow):
     def __init__(self):
@@ -35,6 +37,11 @@ class MainApp(QtWidgets.QMainWindow):
             "gpsla":decoder.gpsla,
             "gpslo":decoder.gpslo,
             "gpsal":decoder.gpsal,
+            "Qxp":decoder.Qxp,
+            "Qxn":decoder.Qxn,
+            "Qyp":decoder.Qyp,
+            "Qyn":decoder.Qyn,
+            "Qm":decoder.Qm,
             "time": QTime.currentTime().toString()
         }
         return data
@@ -61,6 +68,11 @@ class MainApp(QtWidgets.QMainWindow):
         self.ui.iasvalue.setText(f"{data['ias']:.1f} m/s")
         self.ui.bat1value.setText(f"{data['bat1']:.2f} V")
         self.ui.bat2value.setText(f"{data['bat2']:.2f} V")
+        self.ui.Qxp.setText(f"{data['Qxp']:.2f} kPa")
+        self.ui.Qxn.setText(f"{data['Qxn']:.2f} kPa")
+        self.ui.Qyp.setText(f"{data['Qyp']:.2f} kPa")
+        self.ui.Qyn.setText(f"{data['Qyn']:.2f} kPa")
+        self.ui.Qm.setText(f"{data['Qm']:.2f} kPa")
         self.ui.time.setText(data["time"])
 
 if __name__ == "__main__":
