@@ -22,3 +22,4 @@ Qxn = 1
 Qyp = 1
 Qyn = 1
 Qm = 1
+flighttime = 0
